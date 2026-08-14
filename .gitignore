@@ -1,0 +1,36 @@
+# Python cache
+__pycache__/
+*.py[cod]
+*.pyd
+
+# EEG / experiment data
+eeg_data/
+data/
+logs/
+
+# Local configuration
+config.ini
+config.ini.bak*
+config_可选追加.ini
+
+# Backup files
+backup/
+*.bak
+*.backup
+*.font_backup
+*.bak_*
+*.bak-*
+
+# IDE
+.vscode/
+.idea/
+
+# OS files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Temporary files
+*.tmp
+*.temp
+~$*
