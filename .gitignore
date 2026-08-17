@@ -51,3 +51,7 @@ README_RK3588.txt
 requirements-rk3588.txt
 run_ssvep.sh
 run_ssvep_mi.sh
+
+# Legacy / redundant helper scripts
+check_env.py
+安装Windows基础依赖.ps1
