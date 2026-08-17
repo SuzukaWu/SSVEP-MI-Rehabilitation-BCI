@@ -9,7 +9,7 @@ Write-Host "项目目录：$PSScriptRoot"
 Write-Host "Python：$((Get-Command python).Source)"
 python -c "import sys; print('Python version:', sys.version); print('Python executable:', sys.executable)"
 if ($LASTEXITCODE -ne 0) {
-    throw "当前终端无法运行 python。请先 conda activate bci。"
+    throw "当前终端无法运行 Python。请先激活已安装项目依赖的 Python/Conda 环境。"
 }
 
 $required = @(
@@ -26,8 +26,8 @@ foreach ($item in $required) {
 }
 if ($missing.Count -gt 0) {
     Write-Host ""
-    Write-Host "缺少原 SSVEP 项目文件：$($missing -join ', ')" -ForegroundColor Red
-    Write-Host "本压缩包是跨平台替换包。请把这些文件从完整的气动手套 SSVEP 工程复制到当前目录。"
+    Write-Host "缺少必要的项目文件：$($missing -join ', ')" -ForegroundColor Red
+    Write-Host "请确认项目文件已完整下载，并保持原有目录结构。" -ForegroundColor Yellow
     exit 2
 }
 
@@ -52,8 +52,8 @@ if ($ports.Count -eq 0) {
 python -c "import numpy, scipy, pandas, serial, pylsl, psychopy; print('Python dependencies: OK')"
 if ($LASTEXITCODE -ne 0) {
     Write-Host ""
-    Write-Host "依赖检查失败。可运行：" -ForegroundColor Yellow
-    Write-Host ".\安装Windows基础依赖.ps1"
+    Write-Host "依赖检查失败。请运行：" -ForegroundColor Yellow
+    Write-Host "python -m pip install -r .\requirements_windows_minimal.txt"
     exit 3
 }
 
