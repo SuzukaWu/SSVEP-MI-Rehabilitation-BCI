@@ -34,3 +34,15 @@ desktop.ini
 *.tmp
 *.temp
 ~$*
+
+# Archives / packaged old versions
+*.zip
+*.rar
+*.7z
+*.tar
+*.tar.gz
+
+# Local legacy notes
+README_RK3588.txt
+原RK3588运行说明_仅供参考.md
+本次合并说明_比6.md
