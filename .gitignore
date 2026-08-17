@@ -46,3 +46,8 @@ desktop.ini
 README_RK3588.txt
 原RK3588运行说明_仅供参考.md
 本次合并说明_比6.md
+
+# Legacy RK3588 / Linux files
+requirements-rk3588.txt
+run_ssvep.sh
+run_ssvep_mi.sh
